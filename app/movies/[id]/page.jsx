@@ -43,14 +43,18 @@ async function MovieDetailsPage({ params }) {
           <img src="/trailer.png" />
         </div>
         <div id="moviedetails">
-          <div>
+          <div >
             <h3 data-testid= "movie-title">{movieDetails.title}</h3>
             <p data-testid= "movie-release-date">{movieDetails.release_date}</p>
             <p data-testid= "movie-runtime">{movieDetails.runtime}</p>
-            <p data-testid= "movie-overview">{movieDetails.overview}</p>
+            <p data-testid= "movie-overview" id="overview">{movieDetails.overview} </p>
            
           </div>
-          <div></div>
+          <div id="">
+            <img src="/showtime.png"/>
+            <img className="mt-4" src="/more.png"/>
+            <img className="mt-8" src="/best.png"/>
+          </div>
         </div>
 
         {/* <div className="my-4 mx-3">

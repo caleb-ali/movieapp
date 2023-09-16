@@ -61,4 +61,11 @@
 
 #moviedetails{
     display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+#overview{
+    max-width: 40rem ;
 }
