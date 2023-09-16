@@ -83,7 +83,7 @@ function Header() {
         </p>
         
         <Link className=""  href="/">
-          <img src="/Buttonwatchtrailer.png"  id="trailerbtn"/>
+          <img src="/watchtrailer.png"  id="trailerbtn"/>
         </Link>
       </div>
     </div>
