@@ -31,15 +31,29 @@ async function MovieDetailsPage({ params }) {
             <Link href="/">Upcoming</Link>
           </li>
         </ul>
-        <img src="/play.png" id="playimg" width="70%"/>
+        <img src="/play.png" id="playimg" width="70%" />
         <Link className="" href="/" id="logout">
           <img src="/Logout.png" width="20%" />
           <h3>Log out</h3>
         </Link>
       </div>
 
-      <main className="content">
-        <div className="my-4 mx-3">
+      <main className="content" id="content">
+        <div>
+          <img src="/trailer.png" />
+        </div>
+        <div id="moviedetails">
+          <div>
+            <h3 data-testid= "movie-title">{movieDetails.title}</h3>
+            <p data-testid= "movie-release-date">{movieDetails.release_date}</p>
+            <p data-testid= "movie-runtime">{movieDetails.runtime}</p>
+            <p data-testid= "movie-overview">{movieDetails.overview}</p>
+           
+          </div>
+          <div></div>
+        </div>
+
+        {/* <div className="my-4 mx-3">
           <div className="d-flex align-items-center">
             <div className="col-3">
               <img src={IMAGE_BASE_URL + movieDetails.backdrop_path} alt="" />
@@ -74,7 +88,7 @@ async function MovieDetailsPage({ params }) {
               <p>{movieDetails.overview}</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
     </div>
   );

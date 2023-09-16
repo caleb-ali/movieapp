@@ -48,7 +48,17 @@
   color: #686565;
 }
 
+
 #playimg {
   margin-left: 2rem;
   margin-top: 2rem;
+}
+
+#content{
+  margin-top: 2rem;
+  margin-right: 2rem; 
+}
+
+#moviedetails{
+    display: flex;
 }
