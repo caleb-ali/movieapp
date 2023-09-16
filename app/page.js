@@ -14,7 +14,7 @@ export default async function HomePage() {
           <h1 className="text-3xl font-semibold">Featured Movie</h1>
           <p className="text-red-700">See more &gt; </p>
         </div>
-        <div className="d-flex flex-wrap gap-3 ml-28 mr-28">
+        <div className="ml-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {movies.map((movie) => {
             return <Card movie={movie}></Card>;
           })}

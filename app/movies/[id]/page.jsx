@@ -44,11 +44,11 @@ async function MovieDetailsPage({ params }) {
         </div>
         <div id="moviedetails">
           <div >
-            <h3 data-testid= "movie-title">{movieDetails.title}</h3>
-            <p data-testid= "movie-release-date">{movieDetails.release_date}</p>
-            <p data-testid= "movie-runtime">{movieDetails.runtime}</p>
-            <p data-testid= "movie-overview" id="overview">{movieDetails.overview} </p>
-           
+            <h3 className="" data-testid= "movie-title">Title: {movieDetails.title}</h3>
+            <p className="mt-4" data-testid= "movie-release-date">Release Date: {movieDetails.release_date}</p>
+            <p className="mt-4" data-testid= "movie-runtime">Runtime: {movieDetails.runtime} mins</p>
+            <p  className="mt-4" data-testid= "movie-overview" id="overview">Overview: {movieDetails.overview} </p>
+           <img  className="mt-16" src="/rated.png"/>
           </div>
           <div id="">
             <img src="/showtime.png"/>
