@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./page.css";
 
 async function MovieDetailsPage({ params }) {
-  const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w220_and_h330_face";
+  const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w500/";
   const movieDetails = await getMovieDetails(params.id);
 
   return (
@@ -53,9 +53,13 @@ async function MovieDetailsPage({ params }) {
         </nav>
       </div>
       <main className="" id="content">
-        <div>
+        {/* <div>
           <img src="/trailer.png" />
-        </div>
+        </div> */}
+        <div className="">
+                <img src={IMAGE_BASE_URL + movieDetails.backdrop_path} alt="" width="100%" className="rounded-lg"/>
+            </div>
+
         <div id="moviedetails">
           <div>
             <h3 className="" data-testid="movie-title">
