@@ -53,9 +53,7 @@ async function MovieDetailsPage({ params }) {
         </nav>
       </div>
       <main className="" id="content">
-        {/* <div>
-          <img src="/trailer.png" />
-        </div> */}
+        
         <div className="">
                 <img src={IMAGE_BASE_URL + movieDetails.backdrop_path} alt="" width="100%" className="rounded-lg"/>
             </div>
@@ -63,16 +61,16 @@ async function MovieDetailsPage({ params }) {
         <div id="moviedetails">
           <div>
             <h3 className="" data-testid="movie-title">
-              Title: {movieDetails.title}
+               {movieDetails.title}
             </h3>
             <p className="mt-4" data-testid="movie-release-date">
-              Release Date: {movieDetails.release_date}
+               {movieDetails.release_date}
             </p>
             <p className="mt-4" data-testid="movie-runtime">
-              Runtime: {movieDetails.runtime} mins
+               {movieDetails.runtime} 
             </p>
             <p className="mt-4" data-testid="movie-overview" id="overview">
-              Overview: {movieDetails.overview}{" "}
+               {movieDetails.overview}{" "}
             </p>
             <img className=" mt-4 lg:mt-16" src="/rated.png" />
           </div>
