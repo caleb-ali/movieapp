@@ -71,6 +71,12 @@
 }
 
 @media (max-width: 767px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
   #moviedetails{
     display: flex;
     flex-direction: column;
@@ -82,5 +88,30 @@
   margin: 2rem;
 }
 
+#navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+#navsec1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+#navsec3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  font-size: small;
+  font-weight: 500;
+}
 
 }

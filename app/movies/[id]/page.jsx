@@ -37,23 +37,45 @@ async function MovieDetailsPage({ params }) {
           <h3>Log out</h3>
         </Link>
       </div>
+      <div className="sm:block lg:hidden">
+        <nav id="navbar">
+          <div>
+            <Link className="" href="/" id="navsec1">
+              <img src="/tvlogo.png" />
+              <h3>MovieBox</h3>
+            </Link>
+          </div>
 
-      <main className="content" id="content">
+          <div id="navsec3">
+            <h4>Sign in</h4>
+            <img src="/Menuhamburger.png" />
+          </div>
+        </nav>
+      </div>
+      <main className="" id="content">
         <div>
           <img src="/trailer.png" />
         </div>
         <div id="moviedetails">
-          <div >
-            <h3 className="" data-testid= "movie-title">Title: {movieDetails.title}</h3>
-            <p className="mt-4" data-testid= "movie-release-date">Release Date: {movieDetails.release_date}</p>
-            <p className="mt-4" data-testid= "movie-runtime">Runtime: {movieDetails.runtime} mins</p>
-            <p  className="mt-4" data-testid= "movie-overview" id="overview">Overview: {movieDetails.overview} </p>
-           <img  className=" mt-4 lg:mt-16" src="/rated.png"/>
+          <div>
+            <h3 className="" data-testid="movie-title">
+              Title: {movieDetails.title}
+            </h3>
+            <p className="mt-4" data-testid="movie-release-date">
+              Release Date: {movieDetails.release_date}
+            </p>
+            <p className="mt-4" data-testid="movie-runtime">
+              Runtime: {movieDetails.runtime} mins
+            </p>
+            <p className="mt-4" data-testid="movie-overview" id="overview">
+              Overview: {movieDetails.overview}{" "}
+            </p>
+            <img className=" mt-4 lg:mt-16" src="/rated.png" />
           </div>
           <div id="">
-            <img src="/showtime.png"/>
-            <img className="mt-4" src="/more.png"/>
-            <img className="mt-8" src="/best.png"/>
+            <img src="/showtime.png" />
+            <img className="mt-4" src="/more.png" />
+            <img className="mt-8" src="/best.png" />
           </div>
         </div>
       </main>
