@@ -24,7 +24,7 @@ function Card({ movie }) {
             >
               {movie.title}
             </h5>
-            <p className="text-xs mt-2 text-gray-500" data-testid= "movie-release-date">{releaseDate}</p>
+            <p className="text-xs mt-2 text-gray-500" data-testid= "movie-release-date">{movie.release_date}</p>
 
             <div id="ratingcard">
               <div id="imbd">

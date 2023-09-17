@@ -56,29 +56,29 @@ async function MovieDetailsPage({ params }) {
       <main className="" id="content">
         
         <div className="">
-                <img src={IMAGE_BASE_URL + movieDetails.backdrop_path} alt="" width="100%" className="rounded-lg"/>
+                <img src={IMAGE_BASE_URL + movieDetails.backdrop_path} alt="Movie Backdrop" width="100%" className="rounded-lg"/>
             </div>
 
-        <div id="moviedetails">
+            <div id="moviedetails">
           <div>
             <h3 className="" data-testid="movie-title">
-               {movieDetails.title}
+              {movieDetails.title}
             </h3>
             <p className="mt-4" data-testid="movie-release-date">
-            {releaseDate}
+              {releaseDate}
             </p>
             <p className="mt-4" data-testid="movie-runtime">
-               {movieDetails.runtime} 
+              {movieDetails.runtime}
             </p>
             <p className="mt-4" data-testid="movie-overview" id="overview">
-               {movieDetails.overview}{" "}
+              {movieDetails.overview}
             </p>
-            <img className=" mt-4 lg:mt-16" src="/rated.png" />
+            <img className="mt-4 lg:mt-16" src="/rated.png" alt="Rated" />
           </div>
           <div id="">
-            <img src="/showtime.png" />
-            <img className="mt-4" src="/more.png" />
-            <img className="mt-8" src="/best.png" />
+            <img src="/showtime.png" alt="Showtime" />
+            <img className="mt-4" src="/more.png" alt="More" />
+            <img className="mt-8" src="/best.png" alt="Best" />
           </div>
         </div>
       </main>

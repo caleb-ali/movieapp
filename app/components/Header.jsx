@@ -30,13 +30,17 @@ function Header() {
             onSubmit={(e) => handleSubmit(e)}
             role="search"
           >
-            <input
-              type="search"
-              className="px-3 py-[0.25rem] w-[30rem] rounded border border-solid border-white bg-transparent text-white outline-none placeholder:text-white placeholder:text-xs"
-              placeholder="What do you want to watch?"
-              aria-label="Search"
-              aria-describedby="button-addon2"
-            />
+            <form onSubmit={e => handleSubmit(e)} role="search">
+              <input
+                onChange={(e) => setSearchText(e.target.value)}
+                type="search"
+                className="px-3 py-[0.25rem] w-[30rem] rounded border border-solid border-white bg-transparent text-white outline-none placeholder:text-white placeholder:text-xs"
+                placeholder="What do you want to watch?"
+                aria-label="Search"
+                aria-describedby="button-addon2"
+              />
+            </form>
+
             <span
               className="absolute input-group-text  whitespace-nowrap rounded px-[28rem] py-2 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
               id="basic-addon2"
@@ -67,12 +71,12 @@ function Header() {
         </h2>
         <div id="rating">
           <div id="imbd">
-            <img src="/imdb.png"/>
+            <img src="/imdb.png" />
             <p className="text-xs">86.0/100</p>
           </div>
           <div id="imbd">
-            <img src="/tomatoe.png"/>
-            <p  className="text-xs">97%</p>
+            <img src="/tomatoe.png" />
+            <p className="text-xs">97%</p>
           </div>
         </div>
         <p>
@@ -81,9 +85,9 @@ function Header() {
           a $14 million price tag on his head, he is the <br />
           target of hit men and women everywhere.
         </p>
-        
-        <Link className=""  href="/">
-          <img src="/watchtrailer.png"  id="trailerbtn"/>
+
+        <Link className="" href="/">
+          <img src="/watchtrailer.png" id="trailerbtn" />
         </Link>
       </div>
     </div>
