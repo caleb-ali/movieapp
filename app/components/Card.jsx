@@ -19,7 +19,7 @@ function Card({ movie }) {
           <div className="">
             <h5
               data-testid="movie-title"
-              className="text-sm font-medium mt-2 mb-2"
+              className="text-sm font-medium mt-2 mb-1"
             >
               {movie.title}
             </h5>
