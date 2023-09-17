@@ -36,6 +36,7 @@ function Card({ movie }) {
                 <p className="text-xs">97%</p>
               </div>
             </div>
+           
           </div>
         </div>
       </Link>

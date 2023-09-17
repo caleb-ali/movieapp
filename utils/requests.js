@@ -1,25 +1,80 @@
+// const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+// const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+
+// export const getTrendingMovies = async () => {
+//   const res = await fetch(`${BASE_URL}/trending/movie/day?language=en-US&api_key=${API_KEY}`);
+//   console.log(res);
+//   const data = await res.json();
+//   return data.results
+
+// }
+
+// export const getMovies = async (query) => {
+//   const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`);
+//   const data = await res.json();
+//   return data.results;
+// }
+
+// export const getMovieDetails = async (movie_id) => {
+//   const res = await fetch(`${BASE_URL}/movie/${movie_id}?api_key=${API_KEY}`);
+//   const data = await res.json();
+//   return data;
+// }
+
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-
 export const getTrendingMovies = async () => {
-  const res = await fetch(`${BASE_URL}/trending/movie/day?language=en-US&api_key=${API_KEY}`);
-  console.log(res);
-  const data = await res.json();
-  return data.results
-
-}
+  try {
+    const res = await fetch(`${BASE_URL}/trending/movie/day?language=en-US&api_key=${API_KEY}`);
+    if (!res.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await res.json();
+    return data.results;
+  } catch (error) {
+    // Handle API request errors here
+    console.error('Error fetching trending movies:', error.message);
+    // You can choose to re-throw the error or return a default value
+    // throw error;
+    return []; // Return an empty array or another default value
+  }
+};
 
 export const getMovies = async (query) => {
-  const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`);
-  const data = await res.json();
-  return data.results;
-}
+  try {
+    const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`);
+    if (!res.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await res.json();
+    return data.results;
+  } catch (error) {
+    // Handle API request errors here
+    console.error('Error searching for movies:', error.message);
+    // You can choose to re-throw the error or return a default value
+    // throw error;
+    return []; // Return an empty array or another default value
+  }
+};
 
 export const getMovieDetails = async (movie_id) => {
-  const res = await fetch(`${BASE_URL}/movie/${movie_id}?api_key=${API_KEY}`);
-  const data = await res.json();
-  return data;
-}
+  try {
+    const res = await fetch(`${BASE_URL}/movie/${movie_id}?api_key=${API_KEY}`);
+    if (!res.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    // Handle API request errors here
+    console.error('Error fetching movie details:', error.message);
+    // You can choose to re-throw the error or return a default value
+    // throw error;
+    return {}; // Return an empty object or another default value
+  }
+};
+
 
 
