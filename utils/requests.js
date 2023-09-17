@@ -4,6 +4,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const getTrendingMovies = async () => {
   const res = await fetch(`${BASE_URL}/trending/movie/day?language=en-US&api_key=${API_KEY}`);
+  console.log(res);
   const data = await res.json();
   return data.results
 
