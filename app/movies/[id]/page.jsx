@@ -5,6 +5,7 @@ import "./page.css";
 async function MovieDetailsPage({ params }) {
   const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w500/";
   const movieDetails = await getMovieDetails(params.id);
+  const releaseDate = new Date(movieDetails.release_date).toUTCString();
 
   return (
     <div id="container">
@@ -64,7 +65,7 @@ async function MovieDetailsPage({ params }) {
                {movieDetails.title}
             </h3>
             <p className="mt-4" data-testid="movie-release-date">
-               {movieDetails.release_date}
+            {releaseDate}
             </p>
             <p className="mt-4" data-testid="movie-runtime">
                {movieDetails.runtime} 

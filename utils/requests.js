@@ -9,15 +9,15 @@ export const getTrendingMovies = async () => {
       throw new Error('Network response was not ok');
     }
     const data = await res.json();
-    return data.results;
+    const first10Movies = data.results.slice(0, 10);
+
+    return first10Movies;
   } catch (error) {
-    // Handle API request errors here
     console.error('Error fetching trending movies:', error.message);
-    // You can choose to re-throw the error or return a default value
-    // throw error;
-    return []; // Return an empty array or another default value
+    return []; 
   }
 };
+
 
 export const getMovies = async (query) => {
   try {
@@ -28,11 +28,8 @@ export const getMovies = async (query) => {
     const data = await res.json();
     return data.results;
   } catch (error) {
-    // Handle API request errors here
     console.error('Error searching for movies:', error.message);
-    // You can choose to re-throw the error or return a default value
-    // throw error;
-    return []; // Return an empty array or another default value
+    return []; 
   }
 };
 
@@ -45,11 +42,8 @@ export const getMovieDetails = async (movie_id) => {
     const data = await res.json();
     return data;
   } catch (error) {
-    // Handle API request errors here
     console.error('Error fetching movie details:', error.message);
-    // You can choose to re-throw the error or return a default value
-    // throw error;
-    return {}; // Return an empty object or another default value
+    return {}; 
   }
 };
 
