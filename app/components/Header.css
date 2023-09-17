@@ -66,3 +66,19 @@
 #trailerbtn {
     margin-top: 1rem;
 }
+
+@media (max-width: 767px) {
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  #hero{
+    margin-top: 6rem;
+    margin-left: 1rem;
+}
+}

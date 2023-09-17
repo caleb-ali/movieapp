@@ -8,15 +8,15 @@ function Card({ movie }) {
   return (
     <div data-testid="movie-card">
       <Link className="text-decoration-none" href={"/movies/" + movie.id}>
-        <div className="card" style={{ width: "15rem" }}>
+        <div className="card" >
           <img
             data-testid="movie-poster"
             src={IMAGE_BASE_URL + movie.poster_path}
             alt=""
-            className="card-img-top"
+            className=""
           />
 
-          <div className="card-body">
+          <div className="">
           <p
               className="text-xs mt-2 text-gray-500"
             >
