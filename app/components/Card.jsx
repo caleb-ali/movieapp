@@ -4,6 +4,7 @@ import "./Card.css";
 
 function Card({ movie }) {
   const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w220_and_h330_face";
+  const releaseDate = new Date(movie.release_date).toUTCString();
 
   return (
     <div>
@@ -23,7 +24,7 @@ function Card({ movie }) {
             >
               {movie.title}
             </h5>
-            <p className="text-xs mt-2 text-gray-500" data-testid= "movie-release-date">{movie.release_date}</p>
+            <p className="text-xs mt-2 text-gray-500" data-testid= "movie-release-date">{releaseDate}</p>
 
             <div id="ratingcard">
               <div id="imbd">
