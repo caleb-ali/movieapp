@@ -2,6 +2,11 @@
   background-image: url("/Posterbackground.png");
   background-repeat: no-repeat;
   height: 80vh;
+  background-size: cover;
+  background-position: center;
+  /* Other styles for your element */
+  width: 100%; 
+  
 }
 
 #navbar {
