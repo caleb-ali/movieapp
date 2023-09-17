@@ -69,3 +69,18 @@
 #overview{
     max-width: 40rem ;
 }
+
+@media (max-width: 767px) {
+  #moviedetails{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#content{
+  margin: 2rem;
+}
+
+
+}

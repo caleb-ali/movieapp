@@ -48,7 +48,7 @@ async function MovieDetailsPage({ params }) {
             <p className="mt-4" data-testid= "movie-release-date">Release Date: {movieDetails.release_date}</p>
             <p className="mt-4" data-testid= "movie-runtime">Runtime: {movieDetails.runtime} mins</p>
             <p  className="mt-4" data-testid= "movie-overview" id="overview">Overview: {movieDetails.overview} </p>
-           <img  className="mt-16" src="/rated.png"/>
+           <img  className=" mt-4 lg:mt-16" src="/rated.png"/>
           </div>
           <div id="">
             <img src="/showtime.png"/>
@@ -56,43 +56,6 @@ async function MovieDetailsPage({ params }) {
             <img className="mt-8" src="/best.png"/>
           </div>
         </div>
-
-        {/* <div className="my-4 mx-3">
-          <div className="d-flex align-items-center">
-            <div className="col-3">
-              <img src={IMAGE_BASE_URL + movieDetails.backdrop_path} alt="" />
-            </div>
-            <div className="mx-5">
-              <h3>{movieDetails.title}</h3>
-              <div className="d-flex">
-                <p className="py-1 px-2 bg-warning text-white me-2 rounded">
-                  {movieDetails.release_date}
-                </p>
-                <p className="py-1 px-2 bg-warning text-white me-2 rounded">
-                  {movieDetails.original_language}
-                </p>
-                <p className="py-1 px-2 bg-warning text-white me-2 rounded">
-                  {movieDetails.status}
-                </p>
-              </div>
-              <div>
-                <p>
-                  {movieDetails.genres.map((genre) => {
-                    return (
-                      <span
-                        className="mx-1 p-1 bg-dark text-white me-2 rounded"
-                        key={genre.id}
-                      >
-                        {genre.name}
-                      </span>
-                    );
-                  })}
-                </p>
-              </div>
-              <p>{movieDetails.overview}</p>
-            </div>
-          </div>
-        </div> */}
       </main>
     </div>
   );
