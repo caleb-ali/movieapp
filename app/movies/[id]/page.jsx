@@ -5,7 +5,16 @@ import "./page.css";
 async function MovieDetailsPage({ params }) {
   const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w500/";
   const movieDetails = await getMovieDetails(params.id);
-  const releaseDate = new Date(movieDetails.release_date).toUTCString();
+  
+  const formatToUTCDate = (dateString)=>{
+    const localDate = new Date(dateString);
+    const year = localDate.getUTCFullYear();
+    const month = (localDate.getUTCMonth() + 1).toString().padStart(2, '0');
+    const day = localDate.getUTCDate().toString().padStart(2,'0');
+    return `${year}-${month}-${day}`;
+  }
+
+  const releasedate = formatToUTCDate(movieDetails.release_date);
 
   return (
     <div id="container">
@@ -65,7 +74,7 @@ async function MovieDetailsPage({ params }) {
               {movieDetails.title}
             </h3>
             <p className="mt-4" data-testid="movie-release-date">
-              {releaseDate}
+              {releasedate}
             </p>
             <p className="mt-4" data-testid="movie-runtime">
               {movieDetails.runtime}
