@@ -24,7 +24,7 @@ function Header() {
             <h3>MovieBox</h3>
           </Link>
         </div>
-        <div id="navsec2">
+        <div className="hidden md:block" id="navsec2">
           <div
             className=" flex w-full flex-wrap items-stretch"
             onSubmit={(e) => handleSubmit(e)}

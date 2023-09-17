@@ -8,7 +8,7 @@ async function MovieDetailsPage({ params }) {
 
   return (
     <div id="container">
-      <div className="sidebar" id="sidebar">
+      <div className="hidden md:block" id="sidebar">
         <Link className="" href="/" id="sidelogo">
           <img src="/tvlogo.png" width="20%" />
           <h3>MovieBox</h3>
