@@ -7,9 +7,9 @@ function Card({ movie }) {
   const releaseDate = new Date(movie.release_date).toUTCString();
 
   return (
-    <div>
+    <div data-testid='movie-card'>
       <Link className="text-decoration-none" href={"/movies/" + movie.id}>
-        <div className="card" data-testid='movie-card'>
+        <div className="card" >
           <img
             data-testid='movie-poster'
             src={IMAGE_BASE_URL + movie.poster_path}
