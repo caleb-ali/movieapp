@@ -9,9 +9,9 @@ function Card({ movie }) {
   return (
     <div>
       <Link className="text-decoration-none" href={"/movies/" + movie.id}>
-        <div className="card" data-testid="movie-card">
+        <div className="card" data-testid='movie-card'>
           <img
-            data-testid="movie-poster"
+            data-testid='movie-poster'
             src={IMAGE_BASE_URL + movie.poster_path}
             alt=""
             className=""
@@ -19,12 +19,12 @@ function Card({ movie }) {
 
           <div className="">
             <h5
-              data-testid="movie-title"
+              data-testid='movie-title'
               className="text-sm font-medium mt-2"
             >
               {movie.title}
             </h5>
-            <p className="text-xs mt-2 text-gray-500" data-testid= "movie-release-date">{movie.release_date}</p>
+            <p className="text-xs mt-2 text-gray-500" data-testid= 'movie-release-date'>{movie.release_date}</p>
 
             <div id="ratingcard">
               <div id="imbd">
